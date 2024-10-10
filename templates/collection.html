@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ <style>
+ .photography-entry {
+    position: relative;
+}
+.photography-entry:hover .photograhy_abb{
+    display: block;
+}
+.photograhy_abb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    z-index: 2; /* Qora fon uchun z-index */
+    display: none;
+}
+
+.z-index {
+    position: relative;
+    z-index: 10; /* Matn qora fon ustida ko'rinadi */
+    color: #fff; /* Matnni oq rangga o'zgartirish */
+}
+
+
+
+ </style>
+<div id="colorlib-main">
+    <section class="ftco-section ftco-bread">
+        <div class="container">
+            <div class="row no-gutters slider-text justify-content-center align-items-center">
+                <div class="col-md-8 ftco-animate">
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Asosiy menyu</a></span>
+                        <span>Proyektlar</span>
+                    </p>
+                    <h1 class="bread">Mening proyektlarim</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section-3">
+        <div class="photograhy">
+            <div class="row">
+                {% for i in collections %}
+                <div class="col-md-4 ftco-animate">
+                    <section class="home-slider owl-carousel">
+                        <a href="{{ i.image1.url }}" data-lightbox="gallery-{{ i.id }}"
+                            class="photography-entry img image-popup d-flex justify-content-start align-items-end "
+                            style="background-image: url({{ i.image1.url }});">
+                            <span class="photograhy_abb"></span>
+                            <div class="text ml-4 mb-4 z-index">
+                                <h3 class="z-index"  style="padding-right: 25px;">{{ i.title }}</h3>
+                                <span class="tag">Model</span>
+                            </div>
+                        </a>
+                        <a href="{{ i.image2.url }}" data-lightbox="gallery-{{ i.id }}"
+                            class="photography-entry img image-popup d-flex justify-content-start align-items-end"
+                            style="background-image: url({{ i.image2.url }});">
+                            <span class="photograhy_abb"></span>
+                            <div class="text ml-4 mb-4 z-index">
+                                <h3 class="z-index"  style="padding-right: 25px;">{{ i.title }}</h3>
+                                <span class="tag">Model</span>
+                            </div>
+                        </a>
+                        <a href="{{ i.image3.url }}" data-lightbox="gallery-{{ i.id }}"
+                            class="photography-entry img image-popup d-flex justify-content-start align-items-end"
+                            style="background-image: url({{ i.image3.url }})">
+                            <span class="photograhy_abb"></span>
+                            <div class="text ml-4 mb-4 z-index">
+                                <h3 class="z-index"  style="padding-right: 25px;">{{ i.title }}</h3>
+                                <span class="tag">Model</span>
+                            </div>
+                        </a>
+                        <a href="{{ i.image4.url }}" data-lightbox="gallery-{{ i.id }}"
+                            class="photography-entry img image-popup d-flex justify-content-start align-items-end"
+                            style="background-image: url({{ i.image4.url }});">
+                            <span class="photograhy_abb"></span>
+                            <div class="text ml-4 mb-4 z-index">
+                                <h3 class="z-index"  style="padding-right: 25px;">{{ i.title }}</h3>
+                                <span class="tag">Model</span>
+                            </div>
+                        </a>
+                        <a href="{{ i.image5.url }}" data-lightbox="gallery-{{ i.id }}"
+                            class="photography-entry img image-popup d-flex justify-content-start align-items-end"
+                            style="background-image: url({{ i.image5.url }});">
+                            <span class="photograhy_abb"></span>
+                            <div class="text ml-4 mb-4 z-index">
+                                <h3 class="z-index"  style="padding-right: 25px;">{{ i.title }}</h3>
+                                <span class="tag">Model</span>
+                            </div>
+                        </a>
+                    </section>
+                    <div class="text ml-1 mb-1"></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endblock %}

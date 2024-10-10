@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div id="colorlib-main">
+        <section class="ftco-section ftco-bread">
+            <div class="container">
+                <div class="row no-gutters slider-text justify-content-center align-items-center">
+                    <div class="col-md-8 ftco-animate">
+                        <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Asosiy menyu</a></span>
+                            <span>Xizmatlar</span></p>
+                        <h1 class="bread">Bizning xizmatlar</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 services py-4 d-block">
+                            <div class="d-flex justify-content-start">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="{% static 'facade.png' %}" width="60" alt="">
+                                </div>
+                            </div>
+                            <div class="media-body p-2 mt-2">
+                                <h3 class="heading mb-3">JP Fasad</h3>
+                                <p>JP Fasad - zamonaviy dizayn va yuqori sifatli materiallardan tayyorlangan fasad tizimi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 services py-4 d-block">
+                            <div class="d-flex justify-content-start">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="{% static 'solar-panel.png' %}" width="60" alt="">
+                                </div>
+                            </div>
+                            <div class="media-body p-2 mt-2">
+                                <h3 class="heading mb-3">Sendvich panel</h3>
+                                <p>Sendvich panel - energiya tejamkorligi va yuqori issiqlik izolyatsiyasini ta'minlaydi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 services py-4 d-block">
+                            <div class="d-flex justify-content-start">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="{% static 'glass-building (1).png' %}" width="60" alt="">
+                                </div>
+                            </div>
+                            <div class="media-body p-2 mt-2">
+                                <h3 class="heading mb-3">Ven fasad</h3>
+                                <p>Ven fasad - sifatli va estetik ko'rinishdagi fasad yechimlari.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 services py-4 d-block">
+                            <div class="d-flex justify-content-start">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="{% static 'windows.png' %}" width="60" alt="">
+                                </div>
+                            </div>
+                            <div class="media-body p-2 mt-2">
+                                <h3 class="heading mb-3">Rom</h3>
+                                <p>Rom - xavfsizlik va qulaylikni ta'minlaydigan innovatsion qurilmalar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 services py-4 d-block">
+                            <div class="d-flex justify-content-start">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="{% static 'person.png' %}" width="60" alt="">
+                                </div>
+                            </div>
+                            <div class="media-body p-2 mt-2">
+                                <h3 class="heading mb-3">Eshik</h3>
+                                <p>Eshik - yuqori sifatli materiallardan tayyorlangan, zamonaviy dizaynli eshiklar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 services py-4 d-block">
+                            <div class="d-flex justify-content-start">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <img src="{% static 'alucobond.png' %}" width="60" alt="">
+                                </div>
+                            </div>
+                            <div class="media-body p-2 mt-2">
+                                <h3 class="heading mb-3">Alucobond</h3>
+                                <p>Alucobond – tashqi va ichki qurilish ishlarida ishlatiladigan yuqori sifatli kompozit material</p>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+{% endblock %}
